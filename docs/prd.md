@@ -1,4 +1,4 @@
-# Product Requirements Document: Automated 3D Printing Quoting Web Application (v1.6)
+# Product Requirements Document: Automated 3D Printing Quoting Web Application (v1.7)
 
 ### 1. Goals and Background Context
 
@@ -50,7 +50,7 @@ The current quoting process is a manual, inefficient workflow. This project aims
 
 #### Non-Functional Requirements
 
-1.  **NFR1:** The backend logic must use Rust bindings to the Python interpreter via PyO3 and `maturin`. **As much as possible, most logic should be implemented in Rust and called from a thin Python layer.**
+1.  **NFR1:** The backend logic must use Rust bindings to the Python interpreter via PyO3 and `maturin`. **As much as possible, most logic should be implemented in Rust and called from a thin Python layer**.
 2.  **NFR2:** All package and project management must use `uv` within a `venv` environment.
 3.  **NFR3:** All code must be linted and formatted using `ruff`, adhering to PEP 8 with a 120-character line limit.
 4.  **NFR4:** All functions must include Google Style docstrings and type hints. Type hints must adhere to the best practices defined in **PEP 484** and related typing PEPs.
@@ -107,7 +107,7 @@ A **Containerized Monolith** architecture will be implemented. A single service 
 ### 5. Epic List
 
 1.  **Epic 1: Foundational Slice & Technical Spike**
-    * **Goal:** Establish the core project foundation, a containerized monolith service, and implement a minimal end-to-end "tracer bullet" workflow that can take a hardcoded 3D model, slice it, apply the externally configurable pricing formula, and log the result.
+    * **Goal:** Establish the core project foundation, a containerized monolith service, and implement a minimal end-to-end "tracer bullet" workflow that can take a hardcoded 3D model, slice it, **apply the externally configurable pricing formula**, and log the result.
 2.  **Epic 2: User Interface & Request Submission**
     * **Goal:** Develop the full user-facing, **server-rendered HTML interface using Jinja2**, allowing users to upload their own files and submit quote requests.
 3.  **Epic 3: Full Admin Workflow & Final Quoting**
